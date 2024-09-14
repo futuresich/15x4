@@ -5,7 +5,10 @@
 
 ## How to run with Docker
 
-Clone the repo, run `docker compose up` and it will do the job!
+- Clone the repo.
+- Fill `app/config/parameters.yml` by example.
+- Run `docker compose up -d` and it will do the job! The app will listen on port 8080.
+- To install required dependencies, do `composer install` in the container.
 
 ### How to run locally - old instructions
 
