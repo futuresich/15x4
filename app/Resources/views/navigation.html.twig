@@ -20,8 +20,8 @@
                         {{ app.session.get('locale') | default(default_locale) }}
                     </a>
                     <ul class="dropdown-menu">
-                        <a class="dropdown-item" href="{{ url('SetLanguage', { 'lang': 'ru' }) }}">Русский</a>
                         <a class="dropdown-item" href="{{ url('SetLanguage', { 'lang': 'uk' }) }}">Українська</a>
+                        <a class="dropdown-item" href="{{ url('SetLanguage', { 'lang': 'ru' }) }}">Російська</a>
                         <a class="dropdown-item" href="{{ url('SetLanguage', { 'lang': 'en' }) }}">English</a>
                         <a class="dropdown-item" href="{{ url('SetLanguage', { 'lang': 'de' }) }}">Deutsch</a>
                     </ul>

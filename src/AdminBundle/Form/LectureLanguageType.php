@@ -16,11 +16,11 @@ class LectureLanguageType extends ChoiceType
             'label' => 'Язык',
             'choice_translation_domain' => false,
             'choices' => [
-                'Русский' => 'ru',
                 'English' => 'en',
                 'Українська' => 'uk',
                 'Deutsch' => 'de',
                 'Română' => 'ro',
+                'Російська' => 'ru',
             ]
         ]);
     }

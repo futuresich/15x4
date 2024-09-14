@@ -103,12 +103,6 @@ hwi_oauth:
                 csrf: true
                 auth_type: rerequest
 
-        vkontakte:
-            type:          vkontakte
-            scope:         "email"
-            client_id:     "%vk_id%"
-            client_secret: "%vk_secret%"
-
         twitter:
             type:          twitter
             client_id:     "%twitter_id%"

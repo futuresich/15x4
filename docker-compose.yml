@@ -1,0 +1,37 @@
+services:
+  php:
+    build: .
+    container_name: 15x4-website
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8080:80"
+    environment:
+      APACHE_DOCUMENT_ROOT: /var/www/html/web
+      SF_ENVIRONMENT: prod
+    networks:
+      - 15x4-network
+    depends_on:
+      - mysql
+    restart: always
+
+  mysql:
+    image: mysql:8.0
+    container_name: 15x4-mysql-db
+    environment:
+      MYSQL_DATABASE: 15x4
+      MYSQL_USER: 15x4
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - 15x4-network
+    restart: always
+
+networks:
+  15x4-network:
+    driver: bridge
+
+volumes:
+  mysql_data:

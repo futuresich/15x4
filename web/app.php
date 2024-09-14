@@ -10,7 +10,7 @@ $loader = require __DIR__.'/../app/autoload.php';
 if ($debug) {
     \Symfony\Component\Debug\Debug::enable();
 } else {
-    include_once __DIR__.'/../var/bootstrap.php.cache';
+    // include_once __DIR__.'/../var/bootstrap.php.cache';
 }
 
 $kernel = new AppKernel($env, $debug);

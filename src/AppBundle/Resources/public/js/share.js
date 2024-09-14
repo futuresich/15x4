@@ -9,20 +9,20 @@ $(function() {
     }
 
     //vk share
-    if (null === document.getElementById('vk-jssdk')) {
-        vkjs = document.createElement('script'); vkjs.id = 'vk-jssdk';
-        vkjs.src = "//vk.com/js/api/share.js";
-        vkjs.charset = "windows-1251";
-        fjs.parentNode.insertBefore(vkjs, fjs);
-    }
-    setTimeout(
-        function () {
-            if (typeof(VK) !== 'undefined') {
-                $(".vk-share-button").each(function () {
-                    $(this).html(VK.Share.button($(this).data('href'), {type: 'link'}));
-                });
-            }
-        },
-        1000
-    )
+    // if (null === document.getElementById('vk-jssdk')) {
+    //     vkjs = document.createElement('script'); vkjs.id = 'vk-jssdk';
+    //     vkjs.src = "//vk.com/js/api/share.js";
+    //     vkjs.charset = "windows-1251";
+    //     fjs.parentNode.insertBefore(vkjs, fjs);
+    // }
+    // setTimeout(
+    //     function () {
+    //         if (typeof(VK) !== 'undefined') {
+    //             $(".vk-share-button").each(function () {
+    //                 $(this).html(VK.Share.button($(this).data('href'), {type: 'link'}));
+    //             });
+    //         }
+    //     },
+    //     1000
+    // )
 }(document));

@@ -33,9 +33,6 @@ hwi_oauth_login:
 facebook_login:
     path: /login/facebook
 
-vkontakte_login:
-    path: /login/vkontakte
-
 twitter_login:
     path: /login/twitter
 

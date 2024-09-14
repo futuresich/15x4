@@ -971,8 +971,8 @@
         <target>Роль</target>
         <jms:reference-file line="20">/../src/AdminBundle/Form/ContactType.php</jms:reference-file>
       </trans-unit>
-      <trans-unit id="5537fc8e69d7e9830f739eb94071c2212b4027ad" resname="Русский">
-        <source>Русский</source>
+      <trans-unit id="5537fc8e69d7e9830f739eb94071c2212b4027ad" resname="Російська">
+        <source>Російська</source>
         <target>Російська</target>
         <jms:reference-file line="19">/../src/AdminBundle/Form/LectureLanguageType.php</jms:reference-file>
       </trans-unit>

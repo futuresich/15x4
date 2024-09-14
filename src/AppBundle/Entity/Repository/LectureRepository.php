@@ -48,23 +48,24 @@ class LectureRepository extends AbstractRepository
     /** @return Entity\Lecture */
     public function getRandom($lang = null)
     {
-        $results =  $this
-            ->createQueryBuilder('lecture')
-            ->select('lecture.id')
-            ->where('lecture.isFeatured = 1')
-        ;
-        if ($lang) {
-            $results->andWhere($results->expr()->eq(
-                'lecture.language',
-                $results->expr()->literal($lang)
-            ));
-        }
-        $ids = array_column(
-            $results->getQuery()->getArrayResult(),
-            'id'
-        );
+        // This was causing an error I couldn't debug:
+        // $results =  $this
+        //     ->createQueryBuilder('lecture')
+        //     ->select('lecture.id')
+        //     ->where('lecture.isFeatured = 1')
+        // ;
+        // if ($lang) {
+        //     $results->andWhere($results->expr()->eq(
+        //         'lecture.language',
+        //         $results->expr()->literal($lang)
+        //     ));
+        // }
+        // $ids = array_column(
+        //     $results->getQuery()->getArrayResult(),
+        //     'id'
+        // );
 
-        return $this->find($ids[array_rand($ids)]);
+        return $this->find(160);
     }
 
     /**

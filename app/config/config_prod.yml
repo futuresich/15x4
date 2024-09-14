@@ -15,18 +15,18 @@ imports:
 
 monolog:
     handlers:
-        mail_catcher:
-            type:         fingers_crossed
-            action_level: critical
-            handler:      mail_spooler
-        mail_spooler:
-            type:         buffer
-            handler:      mailer
-        mailer:
-            type:         swift_mailer
-            from_email:   15x4talks@gmail.com
-            to_email:     gleb.sidora@gmail.com
-            subject:      Error on 15x4.org
+      #        mail_catcher:
+      #      type:         fingers_crossed
+      #      action_level: critical
+      #      handler:      mail_spooler
+      #  mail_spooler:
+      #      type:         buffer
+      #      handler:      mailer
+      #  mailer:
+      #      type:         swift_mailer
+      #      from_email:   15x4talks@gmail.com
+      #      to_email:     gleb.sidora@gmail.com
+      #      subject:      Error on 15x4.org
 
         fs_catcher:
             type:         fingers_crossed

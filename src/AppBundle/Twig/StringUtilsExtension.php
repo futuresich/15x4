@@ -40,7 +40,7 @@ class StringUtilsExtension extends \Twig_Extension
     {
         switch ($languageCode) {
             case "ru":
-                return "Русский";
+                return "Російська";
             case "uk":
                 return "Українська";
             case "en":

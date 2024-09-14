@@ -1,5 +1,5 @@
 {
-    "name": "arodiss/15x4",
+    "name": "futuresich/15x4",
     "license": "MIT",
     "description": "15x4.org website",
     "type": "project",
@@ -23,7 +23,6 @@
         "ext-mbstring": "*",
         "ext-curl": "*",
         "ext-mysqli": "*",
-
         "symfony/symfony": "3.4.*",
         "doctrine/orm": "2.5.*",
         "doctrine/doctrine-bundle": "1.6.*",
@@ -42,7 +41,8 @@
         "php-http/guzzle6-adapter": "1.1.*",
         "guzzlehttp/guzzle": "6.3.*",
         "php-http/httplug-bundle": "1.9.*",
-        "spomky-labs/otphp": "8.*"
+        "spomky-labs/otphp": "8.*",
+        "doctrine/annotations": "^1.14"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0"

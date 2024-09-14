@@ -15,7 +15,7 @@ class LoadSubtitlesLanguagesCommand extends AbstractCommand
             'abbreviation' => 'EN',
         ],
         [
-            'name' => 'Русский',
+            'name' => 'Російська',
             'abbreviation' => 'RU',
         ],
         [
