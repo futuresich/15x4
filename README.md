@@ -3,7 +3,11 @@
 
 15x4 is community running free popular science lectures in CIS and Europe. More at [15x4.org](15x4.org)
 
-### How to run locally
+## How to run with Docker
+
+Clone the repo, run `docker compose up` and it will do the job!
+
+### How to run locally - old instructions
 
 After cloning project from git, you need to install [composer package manager](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
