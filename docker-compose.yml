@@ -4,8 +4,8 @@ services:
     container_name: 15x4-website
     volumes:
       - .:/var/www/html
-    ports:
-      - "8080:80"
+#    ports:
+#      - "8080:80"
     environment:
       APACHE_DOCUMENT_ROOT: /var/www/html/web
       SF_ENVIRONMENT: prod
@@ -23,8 +23,8 @@ services:
       MYSQL_USER: 15x4
     volumes:
       - mysql_data:/var/lib/mysql
-    ports:
-      - "3306:3306"
+#    ports:
+#      - "3306:3306"
     networks:
       - 15x4-network
     restart: always
