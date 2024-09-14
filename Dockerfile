@@ -24,11 +24,11 @@ RUN a2enmod rewrite
 # Set the working directory to /var/www/html
 WORKDIR /var/www/html
 
+# Copy the project to the working directory
+COPY . /var/www/html
+
 # Set ownership of the /var/www/html/var directory to www-data
 RUN chown -R www-data:www-data /var/www/html/var
 RUN chmod -R 775 /var/www/html/var
-
-# Copy the project to the working directory
-COPY . /var/www/html
 
 CMD ["bash", "-c", "composer install --no-interaction && apache2-foreground"]
