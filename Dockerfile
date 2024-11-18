@@ -29,6 +29,9 @@ COPY . /var/www/html
 
 RUN chown -R www-data:www-data /var/www/html/var
 RUN chmod -R 775 /var/www/html/var
+RUN composer install --no-interaction --no-progress
+RUN bin/console assets:install --symlink
+RUN bin/console assetic:dump --env=prod --no-debug
 
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh

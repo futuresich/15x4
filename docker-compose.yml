@@ -2,6 +2,8 @@ services:
   php:
     build: .
     container_name: 15x4-website
+    ports:
+#      - "8080:80"
     volumes:
       - .:/var/www/html
     environment:
@@ -16,6 +18,8 @@ services:
   mysql:
     image: mysql:8.0
     container_name: 15x4-mysql-db
+    ports:
+#      - "3306:3306"
     environment:
       MYSQL_DATABASE: 15x4
       MYSQL_USER: 15x4
