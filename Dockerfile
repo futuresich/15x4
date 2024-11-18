@@ -33,11 +33,14 @@ ARG DB_NAME
 ARG DB_USER
 ARG DB_PASSWORD
 
-RUN sed -e "s|\$APP_SECRET|${APP_SECRET}|g" \
-        -e "s|\$DB_PASSWORD|${DB_PASSWORD}|g" \
-        -e "s|\$DB_USER|${DB_USER}|g" \
-        -e "s|\$DB_NAME|${DB_NAME}|g" \
-        -e "s|\$ADMIN_PASSWORD|${ADMIN_PASSWORD}|g" \
+RUN echo "DB_NAME=${DB_NAME}"
+RUN echo "DB_USER=${DB_USER}"
+
+RUN sed -e 's|\$APP_SECRET|'${APP_SECRET}'|g' \
+        -e 's|\$DB_PASSWORD|'${DB_PASSWORD}'|g' \
+        -e 's|\$DB_USER|'${DB_USER}'|g' \
+        -e 's|\$DB_NAME|'${DB_NAME}'|g' \
+        -e 's|\$ADMIN_PASSWORD|'${ADMIN_PASSWORD}'|g' \
         /var/www/html/app/config/parameters.yml.dist > /var/www/html/app/config/parameters.yml
 
 # Set ownership of the /var/www/html/var directory to www-data
