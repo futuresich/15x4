@@ -1,14 +1,14 @@
 parameters:
-    secret: 1234567890123456
-    database_password: root
-    database_user: root
-    database_name: 15x4
-    database_host: 127.0.0.1
+    secret: $APP_SECRET
+    database_password: $DB_PASSWORD
+    database_user: $DB_USER
+    database_name: $DB_NAME
+    database_host: mysql
     database_port: ~
 
     admin_users:
       admin:
-        password: admin
+        password: $ADMIN_PASSWORD
         roles: "ROLE_ADMIN"
     google_analytics_id: 1111
 
